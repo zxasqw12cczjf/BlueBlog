@@ -1,10 +1,6 @@
 package com.mrlonely.web.blog.util;
 
-/**
- * ��ҳ������
- * @author Administrator
- *
- */
+
 public class PageUtil {
 	/**
 	 * 生成分页代码

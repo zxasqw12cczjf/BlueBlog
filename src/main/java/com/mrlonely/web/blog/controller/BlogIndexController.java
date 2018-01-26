@@ -65,9 +65,9 @@ public class BlogIndexController{
         if(StringUtils.isNotEmpty(releaseDateStr)){
             param.append("releaseDateStr="+releaseDateStr+"&");
         }
-        request.setAttribute("pageCode", PageUtil.genPagination(request.getContextPath()+"/index.html", blogService.getTotal(map), Integer.parseInt(page), 10, param.toString()));
+        request.setAttribute("pageCode", PageUtil.genPagination(request.getContextPath()+"/", blogService.getTotal(map), Integer.parseInt(page), 10, param.toString()));
         request.setAttribute("mainPage", "foreground/blog/list.jsp");
-        request.setAttribute("pageTitle","Java开源博客系统");
+        request.setAttribute("pageTitle","BlueBlog");
 
         return "blog/mainTemp";
     }

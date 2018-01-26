@@ -45,17 +45,7 @@
 		</div>
 		
 		<div class="col-md-3">
-			<div class="data_list">
-				<div class="data_list_title">
-					<img src="${pageContext.request.contextPath}/static/blog/images/user_icon.png"/>
-					博主信息
-				</div>
-				<div class="user_image">
-					<img src="${pageContext.request.contextPath}/static/blog/userImages/${blogger.imageName }"/>
-				</div>
-				<div class="nickName">${blogger.nickName }</div>
-				<div class="userSign">(${blogger.sign })</div>
-			</div>
+
 			
 			<div class="data_list">
 				<div class="data_list_title">

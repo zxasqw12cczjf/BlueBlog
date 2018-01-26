@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.shiro.SecurityUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -60,9 +61,9 @@ public class BaseController {
 	 */
 	public SysUser getCurrentUser(){
 		
-		HttpSession session = ContextHolderUtil.getSession();
-		SysUser user = (SysUser)session.getAttribute(SessionAttr.USER_LOGIN.getValue());
-		
+//		HttpSession session = ContextHolderUtil.getSession();
+//		SysUser user = (SysUser)session.getAttribute(SessionAttr.USER_LOGIN.getValue());
+		SysUser user = (SysUser) SecurityUtils.getSubject().getPrincipal();
 		return user;
 	}
 }

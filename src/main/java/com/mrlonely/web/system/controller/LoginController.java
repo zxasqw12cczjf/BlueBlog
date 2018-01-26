@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -37,7 +38,13 @@ public class LoginController extends BaseController {
 	private SysUserService sysUserService;
 	@Resource
 	private SysMenuService sysMenuService;
-	
+
+	@RequestMapping("")
+	public String toLogin(HttpServletRequest request){
+
+
+		return "login/login";
+	}
 	/**
 	 * 验证用户
 	 * @param user
